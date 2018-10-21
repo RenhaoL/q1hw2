@@ -67,16 +67,17 @@ plt.show()
 # plt.show()
 
 #generate the histogram graph.
-# sns.set()
-# sns.set_context("notebook")
-# sns.distplot(median, rug = False)
-# plt.show()
-
-#generate a bar graph
 sns.set()
 sns.set_context("notebook")
-sns.barplot(x = "median", y = "minium", data = data_frame(maximum, minium, mean, median), palette="spring")
+ax = sns.distplot(mean, rug_kws={"color": "g"}, bins=10, rug = True, kde = False)
+ax.set(xlabel = "mean")
 plt.show()
+
+#generate a bar graph
+# sns.set()
+# sns.set_context("notebook")
+# sns.barplot(x = "median", y = "minium", data = data_frame(maximum, minium, mean, median), palette="spring")
+# plt.show()
 
 #generate a linear graph
 sns.set()
